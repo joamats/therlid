@@ -1,10 +1,9 @@
-matplotlib==3.9.0
-pandas==2.2.2
-google-colab==1.0.0
-google-cloud-bigquery==3.25.0
+matplotlib==3.7.1
+pandas==2.0.3
+google-cloud-bigquery==3.21.0
 missingno==0.5.2
-numpy==2.0.0
-pandas-gbq==0.23.1
+numpy==1.25.2
+pandas-gbq==0.19.2
 black==24.4.2
 ruff==0.5.0
 nbval==0.11.0
