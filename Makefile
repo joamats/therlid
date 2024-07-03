@@ -3,7 +3,7 @@ install:
 	pip install -r requirements.txt
 
 format:
-	black-nb notebooks/*.ipynb
+	find . -type f -name "*.ipynb" -exec nbqa black {} \;
 
 # lint won't work given bigquery creates the variables on the fly
 # lint:
