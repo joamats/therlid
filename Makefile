@@ -1,12 +1,11 @@
 install:
-	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+	pip install --upgrade pip
+	pip install -r requirements.txt
 
-format:	
-	pip install black-nb &&\
-		black-nb notebooks/*.ipynb
+format:
+	black-nb notebooks/*.ipynb
 
 lint:
-	ruff notebooks/*.ipynb
-		
+	ruff check notebooks/*.ipynb
+
 all: install lint format
