@@ -6,7 +6,7 @@ format:
 	pip install black-nb &&\
 		black-nb notebooks/*.ipynb
 
-lint:c
+lint:
 	ruff notebooks/*.ipynb
 		
 all: install lint format
