@@ -1,0 +1,12 @@
+matplotlib==3.7.3
+pandas==1.5.3
+google-colab==1.0.0
+google-cloud-bigquery==3.10.1
+missingno==0.5.1
+numpy==1.24.0
+pandas-gbq==0.17.9
+black==23.3.0
+pytest==7.4.0
+pytest-cov==4.1.0
+ruff==0.0.285
+nbval==0.10.1
