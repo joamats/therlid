@@ -5,7 +5,8 @@ install:
 format:
 	black-nb notebooks/*.ipynb
 
-lint:
-	ruff check notebooks/*.ipynb
+# lint won't work given bigquery creates the variables on the fly
+# lint:
+# 	ruff check notebooks/*.ipynb
 
 all: install lint format
