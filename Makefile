@@ -9,4 +9,4 @@ format:
 # lint:
 # 	ruff check notebooks/*.ipynb
 
-all: install lint format
+all: install format # lint

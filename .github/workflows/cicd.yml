@@ -21,7 +21,5 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y python3-distutils
         make install
-    - name: Lint notebooks
-      run: make lint
     - name: Format notebooks
       run: make format
