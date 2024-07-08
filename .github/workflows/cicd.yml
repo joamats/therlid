@@ -4,13 +4,9 @@ on:
   push:
     branches:
       - "**"
-    paths:
-      - "**/*.ipynb"
   pull_request:
     branches:
       - "**"
-    paths:
-      - "**/*.ipynb"
 
 jobs:
   build:
