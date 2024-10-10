@@ -8,7 +8,7 @@ This repository contains six main notebooks:
 - **`3_tableones.ipynb`**: Code for producing the descriptive tables presented in the manuscript.
 - **`4_technical_validation.ipynb`**: Code for the technical validation and the figures included in the manuscript.
 - **`5_missingness.ipynb`**: Code for generating the missingness report by racial and ethnic groups.
-- **`6_example.ipynb`**: Code to run through an exmaple usecase of the dataset.
+- **`6_example.ipynb`**: Code to run through an example usecase of the dataset.
 
 Additionally, these Google Spreadsheets contain the variables and mappings used in the dataset harmonization:
 
