@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS `spring-carving-271217.eicu.eicu_abgs`;
-CREATE TABLE `spring-carving-271217.eicu.eicu_abgs` AS
+DROP TABLE IF EXISTS `beaming-courage-280500.eicu.eicu_abgs`;
+CREATE TABLE `beaming-courage-280500.eicu.eicu_abgs` AS
 
 SELECT *
 FROM (
@@ -8,7 +8,7 @@ FROM (
       -- subquery
       SELECT 
         lab.patientunitstayid, 
-        labresultoffset, 
+        labresultoffset as chartoffset, 
         labresult, 
         labname, 
         labresultrevisedoffset
@@ -37,8 +37,4 @@ FROM (
       )
     )
 ) pivoted
-WHERE
-  pH IS NOT NULL AND
-  paCO2 IS NOT NULL AND
-  paO2 IS NOT NULL AND
-  SaO2 IS NOT NULL;
+ORDER BY patientunitstayid ASC

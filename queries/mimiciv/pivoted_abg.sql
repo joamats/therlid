@@ -12,14 +12,14 @@ FROM
     dle2.LABEL, 
     le.VALUE
   FROM 
-    `physionet-data.mimiciii_clinical.labevents` le
+    `physionet-data.mimiciv_hosp.labevents` le
   LEFT JOIN 
   (
     SELECT 
       ITEMID, 
       LABEL 
     FROM 
-      `physionet-data.mimiciii_clinical.d_labitems` 
+      `physionet-data.mimiciv_hosp.d_labitems` 
     LIMIT 1000
   ) dle2 
   ON dle2.ITEMID = le.ITEMID
@@ -27,7 +27,7 @@ FROM
   (
     SELECT ITEMID 
     FROM 
-      `physionet-data.mimiciii_clinical.d_labitems` 
+      `physionet-data.mimiciv_hosp.d_labitems` 
     WHERE category IN ("Blood Gas", "BLOOD GAS") 
     LIMIT 1000
   )
@@ -48,13 +48,3 @@ PIVOT (
     "SPECIMEN TYPE" AS SpecimenType
   )
 ) pivoted
-
-WHERE
-  HADM_ID IS NOT NULL AND
-  SUBJECT_ID IS NOT NULL AND
-  pH IS NOT NULL AND
-  paCO2 IS NOT NULL AND
-  paO2 IS NOT NULL AND
-  SaO2 IS NOT NULL AND
-  SpecimenType IS NOT NULL AND
-  SpecimenType IN ("ART");

@@ -1,4 +1,4 @@
-    -- This query pivots the vital signs for the first 24 hours of a patient's stay
+-- This query pivots the vital signs for the first 24 hours of a patient's stay
 -- Vital signs include heart rate, blood pressure, respiration rate, and temperature
 
 drop table if exists `protean-chassis-368116.mimiciii_pulseOx.pivoted_vital_extended`;
